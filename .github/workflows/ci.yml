@@ -1,0 +1,55 @@
+name: CI
+
+on: [push]
+
+env:
+  CTEST_OUTPUT_ON_FAILURE: 1
+  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+jobs:
+  build-ubuntu:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      with:
+          submodules: true
+    - uses: actions/setup-python@v1
+    - run: pip install cpplint
+    - run: pip install conan
+    - run: sudo apt-get install cppcheck
+    - run: sudo apt-get install lcov
+    - name: configure
+      run: mkdir build && cd build && cmake .. -DENABLE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug
+    - name: build
+      run: cmake --build build
+    - name: test
+      run: | 
+        cd build && make coverage
+        lcov --list coverage.info
+    - name: collect code coverage
+      run: bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+
+  build-windows:
+
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      with:
+          submodules: true
+    - uses: actions/setup-python@v1
+    - run: pip install cpplint
+    - run: pip install conan
+    - name: configure
+      run: |
+        mkdir build
+        cd build
+        cmake -DCMAKE_BUILD_TYPE=Debug ..
+    - name: build
+      run: cmake --build build
+    - name: test
+      run: |
+        cd build
+        ctest -C Debug 
