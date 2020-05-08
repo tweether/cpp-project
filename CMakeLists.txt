@@ -31,7 +31,7 @@ if(CONAN_EXPORTED)
     conan_basic_setup()
 else()
     include("${CMAKE_SOURCE_DIR}/cmake/manual/conan.cmake")
-    conan_cmake_run(CONANFILE conanfile.txt BASIC_SETUP)
+    conan_cmake_run(CONANFILE conanfile.txt BASIC_SETUP BUILD missing)
 endif()
 
 # ---- Test coverage ----
