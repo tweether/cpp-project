@@ -32,8 +32,8 @@ Build by making a build directory (i.e. `build/`), run cmake in that dir, and th
 
 ```shell
 $ mkdir build && cd build
-$ cmake .. -DCMAKE_BUILD_TYPE=Debug
-$ cmake
+$ cmake ..
+$ cmake --build .
 ```
 
 ## Requirements
