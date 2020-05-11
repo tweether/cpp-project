@@ -1,0 +1,35 @@
+language: cpp
+dist: xenial
+notifications:
+  email: false
+
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+            - python3
+            - python3-pip
+            - python3-setuptools
+            - cppcheck
+          update: true
+      env:
+        - MATRIX_EVAL="CXX_COMPILER=g++-7;"    
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+  - pip3 install cpplint
+  - pip3 install conan
+  - mkdir build
+
+install: 
+  - cd build
+  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=$CXX_COMPILER
+  - make
+
+script:
+  - make test
