@@ -1,5 +1,5 @@
 language: cpp
-dist: trusty
+dist: xenial
 notifications:
   email: false
 
@@ -23,12 +23,11 @@ matrix:
 
 before_install:
   - eval "${MATRIX_EVAL}"
-  - PARENTDIR=$(pwd)
-  - mkdir $PARENTDIR/build
+  - mkdir build
 
 install: 
-  - cd $PARENTDIR/build
-  - cmake $PARENTDIR -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=$CXX_COMPILER
+  - cd build
+  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=$CXX_COMPILER
   - make
 
 script:
