@@ -1,4 +1,4 @@
-name: CI
+name: Github Action
 
 on: [push]
 
@@ -13,8 +13,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-      with:
-          submodules: true
     - uses: actions/setup-python@v1
     - run: pip install cpplint
     - run: pip install conan
@@ -37,8 +35,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-      with:
-          submodules: true
     - uses: actions/setup-python@v1
     - run: pip install cpplint
     - run: pip install conan
