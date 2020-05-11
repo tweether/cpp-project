@@ -1,5 +1,5 @@
 
-# C++ moderm template ![CI](https://github.com/ymh199478/cpp-project/workflows/CI/badge.svg) [![Build Status](https://travis-ci.com/ymh199478/cpp-project.svg?branch=master)](https://travis-ci.com/ymh199478/cpp-project) [![codecov](https://codecov.io/gh/ymh199478/cpp-project/branch/master/graph/badge.svg?token=JAM9BYYOE1)](https://codecov.io/gh/ymh199478/cpp-project)
+# C++ moderm template ![CI](https://github.com/ymh199478/cpp-project/workflows/CI/badge.svg) [![Build Status](https://travis-ci.com/ymh199478/cpp-project.svg?branch=master)](https://travis-ci.com/ymh199478/cpp-project) [![codecov](https://codecov.io/gh/ymh199478/cpp-project/branch/master/graph/badge.svg?token=JAM9BYYOE1)](https://codecov.io/gh/ymh199478/cpp-project) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f421910ee01640f49cd3f19bd99037a1)](https://www.codacy.com/manual/ymh199478/cpp-project?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ymh199478/cpp-project&amp;utm_campaign=Badge_Grade)
 
 This is a template to setting up a new C++ project, usually create a new C++ project requires a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration. This template should help reduce the work required to setup up a modern C++ project.
 
