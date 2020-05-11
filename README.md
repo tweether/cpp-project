@@ -13,6 +13,7 @@ This is a template to setting up a new C++ project, usually create a new C++ pro
 - Setup for static code analysis using [cppcheck](http://cppcheck.sourceforge.net/)
 - Continuous integration via [GitHub Actions](https://help.github.com/en/actions) / [Travis-CI](https://travis-ci.com)
 - Support [Conan](https://conan.io/) package manager to quick install your package
+- Moderm github issues template
 - Suited for single header libraries and projects of any scale
 
 ## Usage
