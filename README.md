@@ -23,7 +23,7 @@ This is a template to setting up a new C++ project, usually create a new C++ pro
 When starting a new project, you probably don't want the history of this repository. To start fresh you can use the setup script as follows:
 
 ```shell
-$ git clone https://github.com/ymh199478/cpp-project && cd cpp-project
+$ git clone https://github.com/tweether/cpp-project && cd cpp-project
 $ ./setup.sh
 ```
 
