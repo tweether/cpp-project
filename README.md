@@ -14,6 +14,7 @@ This is a template to setting up a new C++ project, usually create a new C++ pro
 - Continuous integration via [GitHub Actions](https://help.github.com/en/actions) / [Travis-CI](https://travis-ci.com)
 - Support [Conan](https://conan.io/) package manager to quick install your package
 - Moderm github issues template
+- Integrated document system through [redthedocs](https://readthedocs.org)
 - Suited for single header libraries and projects of any scale
 
 ## Usage
