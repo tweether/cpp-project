@@ -1,0 +1,13 @@
+exclude_paths:
+  - '.github/**'
+  - '.*docs?/.*'
+  - '.*vendor/.*'
+  - '.*third[_-]?[Pp]arty'
+  - '.*libs/.*'
+  - '.*dist/.*'
+  - '.*external'
+  - '.travis.yml'
+  - 'codecov.yml' 
+  - 'mkdocs.yml'
+  - 'readthedocs.yml' 
+  - 'README.md'
