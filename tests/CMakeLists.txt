@@ -5,7 +5,7 @@ set(TEST_MAIN ${PROJECT_NAME}.tests)
 set(TEST_RUNNER_PARAMS "")
 
 # ---- Add source files ----
-file(GLOB_RECURSE PROJECT_TEST_SOURCES "${CMAKE_SOURCE_DIR}/tests/*.cc")
+file(GLOB_RECURSE PROJECT_TEST_SOURCES "${CMAKE_SOURCE_DIR}/tests/src/*.cc")
 
 # ---- Create Entry Point ----
 add_executable(${TEST_MAIN} ${PROJECT_TEST_SOURCES})
