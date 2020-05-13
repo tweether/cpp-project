@@ -49,3 +49,22 @@ jobs:
       run: |
         cd build
         ctest -C Debug 
+
+  build-macos:
+
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+    - run: pip install conan
+    - name: configure
+      run: |
+        mkdir build && cd build
+        cmake -DCMAKE_BUILD_TYPE=Debug ..
+    - name: build
+      run: cmake --build build
+    - name: test
+      run: |
+        cd build
+        ctest -C Debug 
